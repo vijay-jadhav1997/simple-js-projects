@@ -16,6 +16,13 @@ body{
   color: white;
   background-color: rgba(0, 132, 141, 0.628);
 }
+h1{
+  border-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgb(225, 225, 0);
+  padding: 10px 20px;
+  background-color: rgb(212, 0, 201);
+}
 #container {
   display: flex;
   flex-direction: column;
