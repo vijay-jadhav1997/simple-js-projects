@@ -14,7 +14,7 @@ body{
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: rgb(158, 143, 172);
+  background-color: rgba(0, 132, 141, 0.628);
 }
 #container {
   display: flex;
@@ -23,13 +23,15 @@ body{
   align-items: center;
   flex: 1;
   max-height:50%;
-  background-color: rgb(42, 41, 41);
+  background-color: rgb(244, 244, 244);
   padding: 30px;
   border-radius: 10px;
 }
 #display {
   padding: 10px;
-  font-size: 40px;
+  font-size: 50px;
+  font-weight: 600;
+  color: rgb(116, 194, 0);
   margin: 30px;
 }
 
@@ -42,10 +44,18 @@ body{
   border-radius: 20px;
   padding: 10px 20px;
   cursor: pointer;
-  background: rgb(51, 51, 51);
-  border: 1px solid rgb(139, 139, 139);
   color: white;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 500;
+}
+#buttons button:first-child{
+  background: rgb(0, 121, 14);
+}
+#buttons button:nth-child(2){
+  background: rgb(227, 4, 4);
+}
+#buttons button:last-child{
+  background: rgb(0, 128, 131);
 }
 #buttons button:hover {
   opacity: 0.8;
@@ -53,3 +63,4 @@ body{
 #buttons button:active {
   opacity: 0.6;
 }
+
