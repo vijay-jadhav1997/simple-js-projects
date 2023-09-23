@@ -17,10 +17,10 @@ function watchCount() {
     }
   }
   
-  let hoursValue = hours < 10 ? "0" + hours : hours;
-  let minutesValue = minutes < 10 ? "0" + minutes : minutes;
-  let secondsValue = seconds < 10 ? "0" + seconds : seconds;
-  display.textContent = `${hoursValue} : ${minutesValue} : ${secondsValue}`;
+  let hrs = hours < 10 ? "0" + hours : hours;
+  let mins = minutes < 10 ? "0" + minutes : minutes;
+  let secs = seconds < 10 ? "0" + seconds : seconds;
+  display.textContent = `${hrs} : ${mins} : ${secs}`;
 }
 
 function startWatch() {
