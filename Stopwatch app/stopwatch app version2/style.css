@@ -53,7 +53,8 @@ h1{
   cursor: pointer;
   color: white;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
+  transition: all 0.3s;
 }
 #buttons button:first-child{
   background: rgb(0, 121, 14);
@@ -61,13 +62,22 @@ h1{
 #buttons button:nth-child(2){
   background: rgb(227, 4, 4);
 }
+#buttons button:nth-child(2):hover{
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(227, 4, 4);
+  color: rgb(227, 4, 4);
+}
 #buttons button:last-child{
+  color: rgb(0, 128, 131);
+  border: 1px solid rgb(0, 128, 131);
+}
+#buttons button:last-child:hover {
+  color: rgb(255, 255, 255);
   background: rgb(0, 128, 131);
 }
 #buttons button:hover {
   opacity: 0.8;
 }
 #buttons button:active {
-  opacity: 0.6;
+  box-shadow: 0 0 10px rgb(249, 0, 207);
 }
-
