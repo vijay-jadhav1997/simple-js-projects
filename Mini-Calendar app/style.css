@@ -38,7 +38,7 @@ body {
 #calendar_box > .right-section {
   width: 60%;
   color: white;
-  background: rgb(224, 0, 19);
+  background: linear-gradient(120deg, rgb(50, 189, 0), rgb(237, 57, 57), rgb(172, 172, 0),rgb(95, 255, 239));
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
   line-height: 40px;
@@ -47,4 +47,11 @@ body {
   font-size: 60px;
   font-weight: 500;
   line-height: 80px;
+}
+h1{
+  color: white;
+  line-height: 60px;
+}
+h3{
+  color: rgb(104, 0, 0);
 }
