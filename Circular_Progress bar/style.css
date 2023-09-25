@@ -18,8 +18,8 @@ body {
 h1{
   border-radius: 10px;
   box-shadow: 0 0 10px rgb(168, 15, 143);
-  background: linear-gradient(120deg, rgb(0, 176, 15),rgb(2, 254, 216), red);
-  text-shadow: -3px -3px 3px rgb(0, 136, 151);
+  background: linear-gradient(150deg, rgb(0, 176, 15),rgb(254, 2, 36), rgb(64, 0, 255), rgb(192, 222, 21));
+  text-shadow: -3px -3px 3px rgb(0, 137, 152), 3px 0 3px rgb(0, 136, 151);
   color: white;
   padding: 10px 20px;
   margin: 0 10px 40px;
