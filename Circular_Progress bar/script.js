@@ -6,7 +6,7 @@ setInterval(() => {
   if (count === 76) {
     clearInterval();
   }else{
-    count += 2;
+    ++count;
     percentage.textContent = `${count}%`
   }
-}, 50);
+}, 27.5);

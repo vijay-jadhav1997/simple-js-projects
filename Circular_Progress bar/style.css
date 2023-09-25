@@ -55,9 +55,9 @@ circle{
   stroke: url(#GradientColor);
   stroke-width: 20px;
   stroke-dasharray: 500;
-  stroke-dashoffset: 500;
-  animation: progress_bar 3s linear forwards;
+  stroke-dashoffset:500;
+  animation: progress_bar 2s linear forwards;
 }
 @keyframes progress_bar {
-  100% {stroke-dashoffset: 500;}
+  100% {stroke-dashoffset: 120;}
 }
