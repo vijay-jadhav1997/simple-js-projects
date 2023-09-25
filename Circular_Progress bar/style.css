@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  background: rgb(227, 237, 247);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.progress {
+  width: 160px;
+  height: 160px;
+  /* background: cadetblue; */
+  position: relative;
+}
+.outer {
+  padding: 20px;
+  width: 180px;
+  height: 180px;
+ border-radius: 50%;
+ /* border: 1px solid green; */
+ box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+.inner {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid green; */
+  box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.15), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.412), -0.5px -0.5px 0px rgba(255, 255, 255, 1), 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 0px 12px 10px rgba(0, 0, 0, 0.05) ;
+}
+#percentage{
+  color: rgb(85, 85, 85);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+svg{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+circle{
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: progress_bar 3s linear forwards;
+}
+@keyframes progress_bar {
+  100% {stroke-dashoffset: 500;}
+}
