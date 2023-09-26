@@ -139,25 +139,57 @@ searchBtn.addEventListener('click', (event)=> {
 })
 
 const moviesElement = document.querySelector('.movies');
-const movie = document.querySelector('.movie');
+
+
+// const movie = document.querySelector('.movie');
+
+
 // console.log(overlay);
 // console.log(poster);
 
-movies.forEach((movie2)=>{
-  let movie1 = movie.cloneNode(true);
-  moviesElement.appendChild(movie1);
+// movies.forEach((movie2)=>{
+//   let movie1 = movie.cloneNode(true);
+//   moviesElement.appendChild(movie1);
   
-  let poster = movie1.lastElementChild;
-  poster.removeAttribute('src');
-  poster.setAttribute('src', `${movie2.poster}`);
+//   let poster = movie1.lastElementChild;
+//   poster.removeAttribute('src');
+//   poster.setAttribute('src', `${movie2.poster}`);
 
-  let overlay = movie1.firstElementChild;
-  let video = overlay.firstElementChild;
-  let details = overlay.lastElementChild;
-  details.firstElementChild.textContent = `${movie2.name}`
-  details.firstElementChild.nextElementSibling.textContent = `IMDB: ${movie2.rating}`
-  // console.log(movie1);
-});
+//   let overlay = movie1.firstElementChild;
+//   let video = overlay.firstElementChild;
+//   let details = overlay.lastElementChild;
+//   details.firstElementChild.textContent = `${movie2.name}`
+//   details.firstElementChild.nextElementSibling.textContent = `IMDB: ${movie2.rating}`
+//   // console.log(movie1);
+// });
 
-let deleteChild = moviesElement.firstElementChild
-moviesElement.removeChild(deleteChild)
+// let deleteChild = moviesElement.firstElementChild
+// moviesElement.removeChild(deleteChild)
+
+movies.forEach(displayMovies, false)
+
+function displayMovies(movie) {
+  let movieElement = document.createElement('div');
+  movieElement.classList.add('movie');
+  moviesElement.appendChild(movieElement)
+
+  let overlay = document.createElement('div');
+  overlay.classList.add('overlay');
+  movieElement.appendChild(overlay);
+  
+  let video = document.createElement('div');
+  video.classList.add('video');
+  overlay.appendChild(video);
+
+  let details = document.createElement('div');
+  details.classList.add('details');
+  details.innerHTML = `<h1>${movie.name}</h1>
+                        <h2>IMDB: ${movie.rating}</h2> `
+  overlay.appendChild(details);
+  
+
+  let poster = document.createElement('img');
+  poster.classList.add('poster');
+  poster.setAttribute('src', `${movie.poster}`);
+  movieElement.appendChild(poster);
+}
