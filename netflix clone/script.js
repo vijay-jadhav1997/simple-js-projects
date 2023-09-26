@@ -47,7 +47,6 @@ let movies = [
   {
     name: 'Titanic (1997)' ,
     poster: 'https://m.media-amazon.com/images/M/MV5BOTdlZGJiNDUtODUyMi00ODQyLTgwNDEtNmI5MzZlZmZlOWQ5XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg',
-    poster: '',
     rating: 8.7,
   },
   {
@@ -138,37 +137,44 @@ searchBtn.addEventListener('click', (event)=> {
   // console.log('Button is working!');
 })
 
+// reference of movies div element
 const moviesElement = document.querySelector('.movies');
 
 
-// const movie = document.querySelector('.movie');
+//* 1st way
+/*
+const movie = document.querySelector('.movie');
 
+console.log(overlay);
+console.log(poster);
 
-// console.log(overlay);
-// console.log(poster);
+movies.forEach(displayMovies1, false)
 
-// movies.forEach((movie2)=>{
-//   let movie1 = movie.cloneNode(true);
-//   moviesElement.appendChild(movie1);
+function displayMovies1(movie2) {
+  let movie1 = movie.cloneNode(true);
+  moviesElement.appendChild(movie1);
   
-//   let poster = movie1.lastElementChild;
-//   poster.removeAttribute('src');
-//   poster.setAttribute('src', `${movie2.poster}`);
+  let poster = movie1.lastElementChild;
+  poster.removeAttribute('src');
+  poster.setAttribute('src', `${movie2.poster}`);
 
-//   let overlay = movie1.firstElementChild;
-//   let video = overlay.firstElementChild;
-//   let details = overlay.lastElementChild;
-//   details.firstElementChild.textContent = `${movie2.name}`
-//   details.firstElementChild.nextElementSibling.textContent = `IMDB: ${movie2.rating}`
-//   // console.log(movie1);
-// });
+  let overlay = movie1.firstElementChild;
+  let video = overlay.firstElementChild;
+  let details = overlay.lastElementChild;
+  details.firstElementChild.textContent = `${movie2.name}`
+  details.firstElementChild.nextElementSibling.textContent = `IMDB: ${movie2.rating}`
+  // console.log(movie1);
+}
+*/
+// 
+let deleteChild = moviesElement.firstElementChild
+moviesElement.removeChild(deleteChild)
 
-// let deleteChild = moviesElement.firstElementChild
-// moviesElement.removeChild(deleteChild)
+//* 2nd way
+/*
+movies.forEach(displayMovies2, false)
 
-movies.forEach(displayMovies, false)
-
-function displayMovies(movie) {
+function displayMovies2(movie) {
   let movieElement = document.createElement('div');
   movieElement.classList.add('movie');
   moviesElement.appendChild(movieElement)
@@ -183,8 +189,10 @@ function displayMovies(movie) {
 
   let details = document.createElement('div');
   details.classList.add('details');
-  details.innerHTML = `<h1>${movie.name}</h1>
-                        <h2>IMDB: ${movie.rating}</h2> `
+  details.innerHTML = `
+    <h1>${movie.name}</h1>
+    <h2>IMDB: ${movie.rating}</h2>
+  `;
   overlay.appendChild(details);
   
 
@@ -192,4 +200,28 @@ function displayMovies(movie) {
   poster.classList.add('poster');
   poster.setAttribute('src', `${movie.poster}`);
   movieElement.appendChild(poster);
+}
+*/
+// 
+
+
+//* 3rd way
+
+movies.forEach(displayMovies3, false);
+
+function displayMovies3(movie) {
+  let movieDiv = document.createElement('div');
+  movieDiv.innerHTML = `
+  <div class="movie">
+    <div class="overlay">
+      <div class="video"></div>
+      <div class="details">
+        <h1>${movie.name}</h1>
+        <h2>IMDB: ${movie.rating}</h2>
+        <p>Director: </p>
+      </div>
+    </div>
+    <img class="poster" src="${movie.poster}" alt="">
+  </div>`;
+  moviesElement.appendChild(movieDiv);
 }
