@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn API Request</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .card{
+      width: 450px;
+      padding: 20px;
+      margin: 50px auto;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgb(212, 0, 191);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      row-gap:5px;
+      opacity: 0;
+    }
+    .card img{
+      width: 100%;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    .card span{
+      font-size: 18px;
+      font-weight: normal;
+    }
+  </style>
+</head>
+<body style="display: #010101;">
+  <section class="box">
+    <button id="click_button">Click Me</button>
+
+    <!-- <div class="card">
+      <img src="" alt="">
+      <h1>Name: </h1>
+      <h3>Followers: </h3>
+    </div> -->
+  </section>
+  <script>
+    const requestUrl = 'https://api.github.com/users/vijay-jadhav1997' ;
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl);
+    let data;
+    xhr.onreadystatechange = function () {
+      console.log(xhr.readyState);
+      if (xhr.readyState === 4) {
+         data = JSON.parse(this.responseText);
+        console.log( data);
+        console.table([data.login, data.followers, data.following, data.avatar_url]);
+      }
+    }
+    xhr.send();
+
+    //* reference of element:
+    const button = document.querySelector('#click_button');
+    const box = document.querySelector('.box');
+
+
+    //* event listner
+    button.addEventListener('click', displayCard) 
+
+
+    function displayCard() {
+      const card = document.createElement('div');
+      card.classList.add('card')
+      card.innerHTML = `
+        <img src="${data.avatar_url}" alt="Profile image">
+        <h1>Name: <span> ${data.name}</span></h1>
+        <h3>Bio: <span> ${data.bio}</span></h3>
+        <h3>Followers: <span> ${data.followers}</span></h3>
+        <h3>Following: <span> ${data.following}</span></h3>
+        <h3>Public Repositories: <span> ${data.public_repos}</span></h3>
+        <h3>Twitter username: <span> ${data.twitter_username}</span></h3>
+      `;
+      card.style.opacity = '1';
+      box.appendChild(card);
+      console.log(card);
+    }
+    
+  </script>
+</body>
+</html>
