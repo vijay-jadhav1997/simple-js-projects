@@ -126,7 +126,6 @@ let movies = [
     rating: 8.1,
   },
 ];
-
 // referencs
 const searchBtn = document.querySelector('.search-bar button');
 
@@ -138,3 +137,27 @@ searchBtn.addEventListener('click', (event)=> {
   // console.log(searchInput, searchInput.substring(3, 10));
   // console.log('Button is working!');
 })
+
+const moviesElement = document.querySelector('.movies');
+const movie = document.querySelector('.movie');
+// console.log(overlay);
+// console.log(poster);
+
+movies.forEach((movie2)=>{
+  let movie1 = movie.cloneNode(true);
+  moviesElement.appendChild(movie1);
+  
+  let poster = movie1.lastElementChild;
+  poster.removeAttribute('src');
+  poster.setAttribute('src', `${movie2.poster}`);
+
+  let overlay = movie1.firstElementChild;
+  let video = overlay.firstElementChild;
+  let details = overlay.lastElementChild;
+  details.firstElementChild.textContent = `${movie2.name}`
+  details.firstElementChild.nextElementSibling.textContent = `IMDB: ${movie2.rating}`
+  // console.log(movie1);
+});
+
+let deleteChild = moviesElement.firstElementChild
+moviesElement.removeChild(deleteChild)
