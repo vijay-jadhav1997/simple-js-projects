@@ -12,11 +12,20 @@ body{
   row-gap: 20px;
   height: 100vh;
   width: 100%;
+  padding: 20px;
+}
+.box{
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 20px;
 }
 .card{
-  width: 450px;
+  flex: 1;
+  min-width: 200px;
   padding: 20px;
-  margin: 50px auto;
+  /* margin: 50px auto; */
   border: none;
   border-radius: 20px;
   box-shadow: 0 0 10px rgb(212, 0, 191);
@@ -25,6 +34,9 @@ body{
   flex-direction: column;
   row-gap:5px;
   opacity: 0;
+}
+@media screen {
+  
 }
 .card img{
   width: 100%;
