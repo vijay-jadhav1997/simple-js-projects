@@ -28,10 +28,12 @@ h1:nth-child(2n){
 .shreeRam {
   margin-block: 10px;
   background: linear-gradient(45deg, rgb(1, 167, 62), rgb(255, 0, 242));
-  padding: 10px;
-  font-family: cursive;
+  padding: 10px 30px;
+  font-family: 'Courier New', Courier, monospace;
   color: rgb(254, 254, 254);
   box-shadow: 0 0 10px rgb(176, 0, 144);
-  text-shadow: -3px -3px 3px rgb(0, 247, 231), 0 3px 3px rgb(0, 240, 188);
   border-radius: 20px;
+}
+.shreeRam span {
+  font-size: 18px;
 }

@@ -8,13 +8,13 @@ const promise1 = new Promise(function(resolve, reject){
     const h1 = document.querySelector('h1');
     const newH1 = h1.cloneNode(true);
     document.body.appendChild(newH1);
-    console.log('async task is completed');
+    // console.log('async task is completed');
     resolve();
   },500)
 });
 
 promise1.then(()=>{
-  console.log('promise consumed');
+  // console.log('promise consumed');
 })
 
 //* 2nd way how to promise in JS
@@ -51,7 +51,7 @@ new Promise((resolve, reject)=>{
   h2.textContent = 'Second Task is resolved....!!';
   document.body.appendChild(h2);
   document.body.removeChild(document.body.firstElementChild);
-  console.log('Task 2 is resolved!');
+  // console.log('Task 2 is resolved!');
 })
   
 
@@ -62,13 +62,94 @@ const promiseThree = new Promise((resolve, reject)=>{
   }, 7000);
 });
 promiseThree.then((data)=>{
-  console.log(data, typeof (data));
+  // console.log(data, typeof (data));
   const div = document.createElement('div');
   div.classList.add('shreeRam')
   div.innerHTML = `
-    <h2> Name:Raghuvansh Shiromani Raja ${data.name}chandra</h2>
-    <h2> Spouse: Shree Maharani Mata ${data.spouse}</h2>
-    <h2> Dham: ${data.dham} Nagari</h2>
+    <h2> Name: <span>${data.name}</span></h2>
+    <h2> Spouse:  <span>${data.spouse}</span></h2>
+    <h2> Dham: <span>${data.dham}</span> </h2>
   `;
   document.body.appendChild(div);
 })
+
+//* advance in promise:
+const promiseFour = new Promise((resolve, reject)=>{
+  setTimeout(() => {
+    let error = false;
+    
+    if (!error) {
+      resolve({userName: 'Jay_Shree_Krushna', devotee:'Shree_Radhaju', dham:'Vrindavan'})
+    } else {
+      reject('ERROR: Something went wrong!')
+    }
+  }, 8000);
+});
+
+promiseFour.then((userData)=>{
+  const div = document.createElement('div');
+  div.classList.add('shreeRam')
+  div.innerHTML = `
+    <h2> Name: <span>${userData.userName}</span></h2>
+    <h2> Devotee:  <span>${userData.devotee}</span></h2>
+    <h2> Dham: <span>${userData.dham}</span> </h2>
+  `;
+  document.body.appendChild(div);
+  return userData.userName;
+}).then((userName)=>{
+  const div = document.createElement('div');
+  div.classList.add('shreeRam')
+  div.innerHTML = `
+    <h2> userName: <span>${userName}</span></h2>
+  `;
+  document.body.appendChild(div);
+}).catch((error)=>{
+  alert(`${error}`);
+  // confirm(`${error}`);
+}).finally(()=>{
+  // alert('The promise is either resolved or rejected!')
+});
+
+
+
+//*  
+const promiseFive = new Promise((resolve, reject)=>{
+  setTimeout(() => {
+    let error = true;
+    
+    if (!error) {
+      resolve({userName: 'Jay_Shree_Vitthal', devotee:'Shree_Rukhmini', dham:'Pandharpur'})
+    } else {
+      reject('ERROR: you did something wrong!')
+    }
+  }, 8000);
+});
+
+
+async function consumePromiseFive(){
+  try {
+    const response = await promiseFive;
+    console.log(response);
+    alert(`${response.userName}`)
+  } catch (error) {
+    alert(`${error}`)
+  }
+};
+consumePromiseFive()
+
+
+
+
+new Promise((resolve, reject) => {
+  console.log("Initial");
+
+  resolve();
+}).then(() => {
+  throw new Error("Something failed");
+
+  console.log("Do this");
+}).catch(() => {
+  console.log("Do that");
+}).then(() => {
+  console.log("Do this, no matter what happened before");
+});
