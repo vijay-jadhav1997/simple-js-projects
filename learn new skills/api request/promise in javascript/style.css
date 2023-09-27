@@ -1,0 +1,37 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+  border: none;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin-block: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(120deg, rgb(23, 200, 0),red, rgb(0, 255, 255), cornflowerblue );
+  border-radius: 5px;
+  color: white;
+}
+h1:nth-child(2n){
+  background: linear-gradient(120deg, rgb(0, 87, 200),rgb(98, 255, 0), rgb(255, 0, 242), rgb(215, 252, 0) );
+}
+
+.shreeRam {
+  margin-block: 10px;
+  background: linear-gradient(45deg, rgb(1, 167, 62), rgb(255, 0, 242));
+  padding: 10px;
+  font-family: cursive;
+  color: rgb(254, 254, 254);
+  box-shadow: 0 0 10px rgb(176, 0, 144);
+  text-shadow: -3px -3px 3px rgb(0, 247, 231), 0 3px 3px rgb(0, 240, 188);
+  border-radius: 20px;
+}
