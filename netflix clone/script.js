@@ -131,52 +131,46 @@ const searchBtn = document.querySelector('.search-bar button');
 // console.log(searchBtn);
 
 
-searchBtn.addEventListener('click', (event)=> {
-  const searchInput = document.querySelector('.search-box').value;
   // console.log(searchInput, searchInput.substring(3, 10));
   // console.log('Button is working!');
-
-  movies.filter((movie)=>{
-    return 
-  })
-})
+  
+ 
 
 // reference of movies div element
 const moviesElement = document.querySelector('.movies');
 
 
 //* 1st way
-/*
-const movie = document.querySelector('.movie');
 
-console.log(overlay);
-console.log(poster);
+// const movie = document.querySelector('.movie');
 
-movies.forEach(displayMovies1, false)
+// console.log(overlay);
+// console.log(poster);
 
-function displayMovies1(movie2) {
-  let movie1 = movie.cloneNode(true);
-  moviesElement.appendChild(movie1);
+// movies.forEach(displayMovies1, false)
+
+// function displayMovies1(movie2) {
+//   let movie1 = movie.cloneNode(true);
+//   moviesElement.appendChild(movie1);
   
-  let poster = movie1.lastElementChild;
-  poster.removeAttribute('src');
-  poster.setAttribute('src', `${movie2.poster}`);
+//   let poster = movie1.lastElementChild;
+//   poster.removeAttribute('src');
+//   poster.setAttribute('src', `${movie2.poster}`);
 
-  let overlay = movie1.firstElementChild;
-  let video = overlay.firstElementChild;
-  let details = overlay.lastElementChild;
-  details.firstElementChild.textContent = `${movie2.name}`
-  details.firstElementChild.nextElementSibling.textContent = `IMDB: ${movie2.rating}`
-  // console.log(movie1);
-}
-*/
-// 
+//   let overlay = movie1.firstElementChild;
+//   let video = overlay.firstElementChild;
+//   let details = overlay.lastElementChild;
+//   details.firstElementChild.textContent = `${movie2.name}`
+//   details.firstElementChild.nextElementSibling.textContent = `IMDB: ${movie2.rating}`
+//   // console.log(movie1);
+// }
+
+
 let deleteChild = moviesElement.firstElementChild
 moviesElement.removeChild(deleteChild)
 
-//* 2nd way
+// //* 2nd way
 
-movies.forEach(displayMovies2, false)
 
 function displayMovies2(movie) {
   let movieElement = document.createElement('div');
@@ -207,7 +201,7 @@ function displayMovies2(movie) {
   movieElement.appendChild(poster);
 }
 
-// 
+
 
 
 //* 3rd way
@@ -237,3 +231,25 @@ function displayMovies2(movie) {
 //   moviesElement.appendChild(movieDiv);
 // }
 
+
+// display all movie:
+movies.forEach(displayMovies2, false)
+
+
+// display searching Movie :
+function searchMovie () {
+  const searchInput = document.querySelector('.search-box').value;
+  console.log(searchInput);
+
+  if(searchInput !== ''){
+    moviesElement.innerHTML = '';
+    movies.filter((movie)=>{
+      console.log(movie.name);
+      return movie.name.toUpperCase().includes(searchInput.toUpperCase());
+    }).forEach(displayMovies2, false)
+  } else {
+    moviesElement.innerHTML = ``;
+    movies.forEach(displayMovies2, false)
+  }
+ 
+}
