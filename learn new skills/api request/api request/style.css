@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border: none;
 }
 body{
   display: flex;
@@ -46,4 +47,18 @@ body{
 .card span{
   font-size: 18px;
   font-weight: normal;
+}
+#click_button {
+  padding: 10px 20Px;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}
+#click_button:hover{
+  background: linear-gradient(45deg, cornflowerblue, rgb(224, 0, 175));
+  color: white;
+
+}
+#click_button:active{
+  opacity: 0.7;
 }
