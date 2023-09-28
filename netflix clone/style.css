@@ -6,6 +6,7 @@
   border: none;
 }
 body{
+  margin-top: 70px;
   height: 100vh;
   width: 100%;
 }
@@ -16,6 +17,11 @@ body{
   padding: 0 5%;
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 .logo {
   width: 20%;
@@ -98,9 +104,9 @@ body{
 } */
 
 .movie {
-  width: 100%;
+  width: max-content;
   height: 450px;
-  background-color: yellowgreen;
+  /* background-color: yellowgreen; */
   border-radius: 20px;
   overflow: hidden;
   position: relative;

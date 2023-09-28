@@ -135,6 +135,10 @@ searchBtn.addEventListener('click', (event)=> {
   const searchInput = document.querySelector('.search-box').value;
   // console.log(searchInput, searchInput.substring(3, 10));
   // console.log('Button is working!');
+
+  movies.filter((movie)=>{
+    return 
+  })
 })
 
 // reference of movies div element
@@ -171,7 +175,7 @@ let deleteChild = moviesElement.firstElementChild
 moviesElement.removeChild(deleteChild)
 
 //* 2nd way
-/*
+
 movies.forEach(displayMovies2, false)
 
 function displayMovies2(movie) {
@@ -190,8 +194,9 @@ function displayMovies2(movie) {
   let details = document.createElement('div');
   details.classList.add('details');
   details.innerHTML = `
-    <h1>${movie.name}</h1>
-    <h2>IMDB: ${movie.rating}</h2>
+    <h3>${movie.name}</h3>
+    <h3>IMDB: ${movie.rating}</h3>
+    <p>Director: </p>
   `;
   overlay.appendChild(details);
   
@@ -201,30 +206,34 @@ function displayMovies2(movie) {
   poster.setAttribute('src', `${movie.poster}`);
   movieElement.appendChild(poster);
 }
-*/
+
 // 
 
 
 //* 3rd way
 
-movies.forEach(displayMovies3, false);
+// function searchMovie() {
+//   movies.forEach(displayMovies3, false);
+// }
+// searchMovie();
 
-function displayMovies3(movie) {
-  let movieDiv = document.createElement('div');
-  movieDiv.innerHTML = `
-  <div class="movie">
-    <div class="overlay">
-      <div class="video"> 
-        <div><ion-icon name="reload-outline"></ion-icon> </div> 
-        <div> Please wait while loading! </div>
-      </div>
-      <div class="details">
-        <h3>${movie.name}</h3>
-        <h3>IMDB: ${movie.rating}</h3>
-        <p>Director: </p>
-      </div>
-    </div>
-    <img class="poster" src="${movie.poster}" alt="">
-  </div>`;
-  moviesElement.appendChild(movieDiv);
-}
+// function displayMovies3(movie) {
+//   let movieDiv = document.createElement('div');
+//   movieDiv.classList.add('movie');
+//   movieDiv.innerHTML = `
+//     <div class="overlay">
+//       <div class="video"> 
+//         <div><ion-icon name="reload-outline"></ion-icon> </div> 
+//         <div> Please wait while loading! </div>
+//       </div>
+//       <div class="details">
+//         <h3>${movie.name}</h3>
+//         <h3>IMDB: ${movie.rating}</h3>
+//         <p>Director: </p>
+//       </div>
+//     </div>
+//     <img class="poster" src="${movie.poster}" alt="">
+//   `;
+//   moviesElement.appendChild(movieDiv);
+// }
+
