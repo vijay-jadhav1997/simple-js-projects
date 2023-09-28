@@ -214,10 +214,13 @@ function displayMovies3(movie) {
   movieDiv.innerHTML = `
   <div class="movie">
     <div class="overlay">
-      <div class="video"></div>
+      <div class="video"> 
+        <div><ion-icon name="reload-outline"></ion-icon> </div> 
+        <div> Please wait while loading! </div>
+      </div>
       <div class="details">
-        <h1>${movie.name}</h1>
-        <h2>IMDB: ${movie.rating}</h2>
+        <h3>${movie.name}</h3>
+        <h3>IMDB: ${movie.rating}</h3>
         <p>Director: </p>
       </div>
     </div>
