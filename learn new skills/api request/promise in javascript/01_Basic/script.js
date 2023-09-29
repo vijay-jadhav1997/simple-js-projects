@@ -191,3 +191,5 @@ const mappedArray = names.map((name)=>{
   return name + `${name.length}`;
 })
 console.log(mappedArray);
+
+
