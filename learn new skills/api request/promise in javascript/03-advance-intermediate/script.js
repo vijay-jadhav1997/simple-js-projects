@@ -82,7 +82,7 @@ getDone();
 
 
 //* To experiment with error handling, "threshold" values cause errors randomly
-const THRESHOLD_A = 8; // can use zero 0 to guarantee error
+const THRESHOLD_A = 0; // can use zero 0 to guarantee error
 
 function tetheredGetNumber(resolve, reject) {
   setTimeout(() => {
