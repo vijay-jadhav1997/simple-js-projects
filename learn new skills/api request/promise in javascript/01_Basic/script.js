@@ -153,3 +153,41 @@ new Promise((resolve, reject) => {
 }).then(() => {
   console.log("Do this, no matter what happened before");
 });
+
+let name = 'Rahul';
+let working = true;
+const user1 = {
+  name: 'Akash',
+  age: 25,
+  student: true,
+  isMarried: false,
+};
+
+const user2 = {...user1, name, age: 30,working,}
+user2
+
+
+
+
+let num = 10;
+console.log(num++, num, ++num );
+//*
+let names = ['Akash', 'Ram', 'Shyam', 'Mohan', 'Damodar', 'Hari', 'Jay', 'Bharat', 'Arjun', 'Kiriti', 'Bhim', 'Govind'];
+let namees = names.filter((name)=> name.length < 5);
+const obj = {...namees};
+const obj1 = {...names.filter((name)=> name.length < 5)};
+console.log(obj);
+console.log(obj1);
+
+// 
+let numbers = [20,3,4,5,11, 15, 8];
+const result = numbers.map((number)=> number*10);
+
+console.log(result);
+console.log(numbers);
+
+
+const mappedArray = names.map((name)=>{
+  return name + `${name.length}`;
+})
+console.log(mappedArray);
