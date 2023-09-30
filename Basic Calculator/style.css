@@ -201,10 +201,11 @@ a:hover {
 .nav-brand {
   font-weight: 450;
   text-decoration: none;
-  padding-left: 20px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  padding: 0 20px;
+  margin: 15px 0;
   color: initial;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .table {
@@ -267,6 +268,7 @@ a:hover {
     border-radius: 4px;
     outline: none;
     border: 1px solid var(--neutral-3);
+    cursor: pointer;
 }
 #calculator button:active {
     background-color: var(--primary-1);
@@ -279,4 +281,9 @@ a:hover {
 .equal {
     font-weight: bold;
     font-size: 16px;
+}
+.equal:hover {
+  background-color: rgb(0, 175, 0);
+  color: white;
+  border-color: rgb(255, 255, 255);
 }

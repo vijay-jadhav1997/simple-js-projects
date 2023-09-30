@@ -78,3 +78,12 @@ function name() {
     
 }
 */
+
+
+const navBrand = document.querySelector('.nav-brand');
+function modify() {
+    navBrand.style = `font-size: 50px; font-femily: Arial; color: yellowgreen; box-shadow: 0 0 10px rgb(179, 0, 179);`;
+}
+function demodify() {
+    navBrand.style = ``;
+}
