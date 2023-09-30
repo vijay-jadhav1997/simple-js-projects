@@ -16,7 +16,7 @@ event.then((name)=> {
   alert(error);
 })
 */
-
+/*
 async function getData(){
   return 'Jay_Hari..!';
 }
@@ -57,80 +57,90 @@ getGet.then((promiseData)=> {
   console.log(promiseData);
 })
 
-
-
+*/
+/*
 //! using 'async' + 'await' to handle Promise
 
 // Before 'async' + 'await' how we handle promise:
 const promiseNew = new Promise((resolve, reject)=> {
-  resolve("Promise is completed Just Now!")
+  setTimeout(() => {
+    resolve("4) Promise is completed in 5 sec!");
+  }, 5000);
+});
+const promiseNew2 = new Promise((resolve, reject)=> {
+  setTimeout(() => {
+    resolve("7) Promise is completed in 8 sec!");
+  }, 10000);
 });
 
 async function handlePromise() {
+  console.log('1) !!...Har Har Mahadev...!!');
   const value = await promiseNew;
+  // confirm('!! Radhe Govind, Govind Radhe !!');
+  console.log('3) !! Radhe Radhe !!', '!!...Har Har Mahadev...!!');
   console.log(value);
+
+
+  const value2 = await promiseNew2;
+  // confirm('!! Radhe Govind, Govind Radhe !!');
+  console.log('6) !! Jay Jay Ram Krushna Hari !!');
+  console.log(value2);
 }
 handlePromise();
 
-promiseNew.then((result)=> console.log(result))
-function getDone() {
-  console.log('!! Jay Bhole Nath !!');
-}
-getDone();
+// function getDone() {
+//   promiseNew.then((result)=> console.log(result))
+//   console.log('!! Jay Bhole Nath !!');
+// }
+// getDone();
 
 
 
-
-//* To experiment with error handling, "threshold" values cause errors randomly
-const THRESHOLD_A = 0; // can use zero 0 to guarantee error
-
-function tetheredGetNumber(resolve, reject) {
+function name() {
+  console.log("2) Jay Shree Vitthal Rakhumai");
   setTimeout(() => {
-    const randomInt = Date.now();
-    const value = randomInt % 10;
-    if (value < THRESHOLD_A) {
-      resolve(value);
-    } else {
-      reject(`Too large: ${value}`);
-    }
-  }, 500);
+    console.log("5) !! Shree Dnyanoba Mauli Tukaram !!");
+  }, 8000);
+}
+name()
+
+
+let count = 1;
+let timer = setInterval(() => {
+  console.log(`${count} !! Shree_Shyama_Ju !!`);
+  count++;
+}, 1000);
+
+setTimeout(() => {
+  clearInterval(timer);
+  console.log('!! Shree_Ji !!');
+}, 10000);
+*/
+
+
+let ApiUrl = 'https://api.github.com/users/vijay-jadhav1997';
+
+
+async function name() {
+  try {
+  const userData = fetch(ApiUrl);
+  const data =  await userData;
+  const jsonData =  await data.json();
+  console.log(jsonData);
+  const element = document.createElement('h1');
+  const img = document.createElement('img');
+  img.setAttribute('src', `${jsonData.avatar_url}`);
+  img.setAttribute('alt', `Profile Image`);
+  img.style = `Border: none; Border-radius: 20px; Box-shadow: 5px 5px 15px violet`;
+  element.textContent = `${jsonData.name}`;
+  document.body.appendChild(element);
+  document.body.appendChild(img);
+} catch{
+  let error = Error('Something went wrong while fetching data from GitHub API!')
+  console.log();
+}
 }
 
-function determineParity(value) {
-  const isOdd = value % 2 === 1;
-  return { value, isOdd };
-}
+name();
 
-function troubleWithGetNumber(reason) {
-  const err = new Error("Trouble getting number", { cause: reason });
-  console.error(err);
-  throw err;
-}
-
-function promiseGetWord(parityInfo) {
-  return new Promise((resolve, reject) => {
-    const { value, isOdd } = parityInfo;
-    if (value >= THRESHOLD_A - 1) {
-      reject(`Still too large: ${value}`);
-    } else {
-      parityInfo.wordEvenOdd = isOdd ? "odd" : "even";
-      resolve(parityInfo);
-    }
-  });
-}
-
-new Promise(tetheredGetNumber)
-  .then(determineParity, troubleWithGetNumber)
-  .then(promiseGetWord)
-  .then((info) => {
-    console.log(`Got: ${info.value}, ${info.wordEvenOdd}`);
-    return info;
-  })
-  .catch((reason) => {
-    if (reason.cause) {
-      console.error("Had previously handled error");
-    } else {
-      console.error(`Trouble with promiseGetWord(): ${reason}`);
-    }
-  })
-  .finally((info) => console.log("All done"));
+console.log('Jay Shree Ram...!');
