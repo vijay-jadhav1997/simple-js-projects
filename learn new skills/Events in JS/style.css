@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.container {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+}
+.story{
+  box-shadow: 0 0 10px palevioletred;
+  margin: 10px 0;
+  border-radius: 15px;
+  padding: 20px;
+  line-height: 27px;
+}
+
+button {
+  width: 200px;
+  border-radius: 10px;
+  padding: 10px 0;
+  background: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+button:hover {
+  opacity: 0.8;
+}
+button:active {
+  opacity: 0.5;
+}
+#set-text{
+  color: green;
+  border: 1px solid green;
+}
+#clear-text{
+  color: red;
+  border: 1px solid red;
+}
+.alert {
+  width: 90%;
+  height: 400px;
+  margin-block-start: 25px;
+  border: 3px solid rgb(255, 238, 0);
+  background-color: rgb(4, 254, 171);
+  text-align: center;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgb(178, 0, 154);
+  border-radius: 20px;
+  box-shadow: 0 0 15px tomato;
+}
+div.parent {
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+div.child {
+  border: 1px solid red;
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
