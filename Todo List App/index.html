@@ -8,24 +8,31 @@
 </head>
 <body>
   <header></header>
-  <section id="todo_container">
-    <div class="input_field">
-      <input type="text" name="todoName" id="todo_name" placeholder="Enter Todo title...">
-      <input type="date" name="todoDate" id="todo_date">
-    </div>
-    <div class="create_field">
-      <button class="add_button">Create Todo</button>
-    </div>
-  </section>
-
-  <section class="todo_list">
-    <label for="todo_list">Your All Todos: </label>
-    <!-- <div class="todo_box">
-      <h1></h1>
-      <h3></h3>
-      <p></p>
-    </div> -->
-  </section>
+  <main>
+    <section id="todo_container">
+      <div class="input_field">
+        <input type="text" name="todoName" id="todo_name" placeholder="Enter Todo title...">
+        <input type="datetime-local" name="todoDate" id="todo_date">
+      </div>
+      <input type="text" name="description" id="descr_input">
+      <div class="create_field">
+        <button class="add_button">Create Todo</button>
+      </div>
+    </section>
+  
+    <section class="todo_list">
+      <label for="todo_list">Your All Todos: </label>
+      <div class="todo_box">
+        <div class="title_box">
+          <h3 class="title">Todo title</h3>
+          <span class="time">(todo date & time)</span>
+        </div>
+        <p>Todo discription....</p>
+        <button class="delete_Btn">Delete</button>
+      </div>
+    </section>
+  </main>
+  
   
   <script src="script.js"></script>
 </body>

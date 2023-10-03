@@ -11,27 +11,42 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  /* align-items: center; */
+  align-items: center;
   row-gap: 20px;
 }
 #todo_container{
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  background-color: yellow;
+  row-gap: 10px;
+  /* background-color: yellow; */
+  border: 1px solid yellowgreen;
+  border-radius: 10px;
   margin-block: 20px;
   padding: 10px;
-  /* width: max-content; */
+  width: max-content;
 }
 .input_field #todo_name,
-.input_field #todo_date{
+.input_field #todo_date,
+#descr_input {
   outline: none;
   padding: 10px 0;
-  /* text-indent: 10px; */
   font-size: 1.1em;
   border-radius: 5px;
-  text-align: center;
+  /* text-align: center; */
+  box-shadow: 0 0 5px darkslategray;
+}
+.input_field #todo_name{
   text-transform: capitalize;
+  text-indent: 10px;
+}
+.input_field #todo_date{
+  font-size: medium;
+  text-align: center;
+}
+#descr_input {
+  width: 100%;
+  text-indent: 10px;
 }
 
 .create_field .add_button {
@@ -62,8 +77,39 @@ body{
   border: 1px solid gray;
 }
 .todo_list .todo_box {
+  position: relative;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 0 10px lightslategray;
+  box-shadow: 0 0 5px lightslategray;
   width: 400px;
+}
+
+.title_box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  column-gap: 5px;
+}
+.title_box .title {
+  text-transform: capitalize;
+}
+.delete_Btn {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 5px;
+  padding: 5px;
+  background-color: rgb(209, 0, 0);
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3sec;
+}
+.delete_Btn:hover {
+  background-color: white;
+  border: 1px solid rgb(209, 0, 0);
+  color: rgb(209, 0, 0);
+}
+.delete_Btn:active {
+ box-shadow: 0 0 5px rgb(209, 0, 0);
 }
