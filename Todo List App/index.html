@@ -16,20 +16,23 @@
       </div>
       <input type="text" name="description" id="descr_input">
       <div class="create_field">
-        <button class="add_button">Create Todo</button>
+        <button class="add_button">add new Task <span>+</span></button>
       </div>
     </section>
   
     <section class="todo_list">
       <label for="todo_list">Your All Todos: </label>
-      <!-- <div class="todo_box">
-        <div class="title_box">
-          <h3 class="title">Todo title</h3>
-          <span class="time">(todo date & time)</span>
+      <div class="todo_box">
+        <input type="checkbox" name="task_completed" id="task_checkbox" onclick="taskDone()">
+        <div class="new_task">
+          <div class="title_box">
+            <h3 class="title">Todo title</h3>
+            <span class="time">(todo date & time)</span>
+          </div>
+          <p>Todo discription....</p>
         </div>
-        <p>Todo discription....</p>
-        <button class="delete_Btn">X</button>
-      </div> -->
+        <button class="delete_Btn" onclick="deleteTodoBox()">X</button>
+      </div>
     </section>
   </main>
 

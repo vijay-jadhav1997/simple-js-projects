@@ -77,12 +77,23 @@ body{
   border: 1px solid gray;
 }
 .todo_list .todo_box {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
   position: relative;
+  gap: 10px;
+}
+#task_checkbox {
+  height: 20px;
+  width: 20px;
+}
+.new_task {
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 5px lightslategray;
   width: 450px;
 }
+
 
 .title_box {
   display: flex;
@@ -101,6 +112,7 @@ body{
   right: 5px;
   height: 25px;
   width: 25px;
+  font-size: 22px;
   background-color: rgb(209, 0, 0);
   border-radius: 50%;
   color: white;
