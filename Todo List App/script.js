@@ -36,10 +36,21 @@ function createTask(task) {
   const todoElement = document.createElement('div');
   todoElement.classList.add('todo_box');
   todoList.appendChild(todoElement);
+
+  const checkboxInput = document.createElement('input')
+  checkboxInput.setAttribute('type', 'checkbox');
+  checkboxInput.setAttribute('id', 'task_checkbox');
+  checkboxInput.setAttribute('onclick', 'taskDone()');
+  todoElement.appendChild(checkboxInput);
+
   
+  const newTaskElement = document.createElement('div');
+  newTaskElement.classList.add('new_task');
+  todoElement.appendChild(newTaskElement);
+
   const titleBoxElement = document.createElement('div');
   titleBoxElement.classList.add('title_box');
-  todoElement.appendChild(titleBoxElement);
+  newTaskElement.appendChild(titleBoxElement);
   
   const titleElement = document.createElement('h3');
   titleElement.classList.add('title');
@@ -53,7 +64,7 @@ function createTask(task) {
   
   const todoDiscrElement = document.createElement('p');
   todoDiscrElement.textContent =`${task.discription}`;
-  todoElement.appendChild(todoDiscrElement);
+  newTaskElement.appendChild(todoDiscrElement);
 
   const deleteBtnElement = document.createElement('button');
   deleteBtnElement.classList.add('delete_Btn');
@@ -77,15 +88,16 @@ function deleteTodoBox()  {
   todoList.removeChild(todoBox)
 };
 
-//* function to mark task done
+//* function to mark task done:
+let count = 0;
 function taskDone() {
-  const deleteBtn = document.querySelector('.delete_Btn');
-  const todoBox = deleteBtn.parentNode;
+  const checkboxInput = document.querySelector('#task_checkbox');
+  const todoBox = checkboxInput.parentNode;
   if (count === 0) {
     todoBox.style = 'text-decoration: line-through; color: gray;'
     count = 1;
   } else {
-    todoBox.style = 'text-decoration: line-through; color: gray;'
+    todoBox.style = 'text-decoration: none; color: black;'
     count = 0;
   }
 }
