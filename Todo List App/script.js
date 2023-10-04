@@ -8,7 +8,7 @@ let todoDiscriptionText = document.querySelector('#descr_input');
 const todoList = document.querySelector('.todo_list')
 // console.log(todoList);
 
-let allTodos = [];
+// let allTodos = [];
 
 addBtn.addEventListener('click' ,(e)=> {
   let todoObject = {};
@@ -25,20 +25,20 @@ addBtn.addEventListener('click' ,(e)=> {
     todoObject.discription = `${todoDiscriptionText.value}`;
     // console.log(todoObject);
 
-    allTodos.push(todoObject);
-    console.log(allTodos);
+    // allTodos.push(todoObject);
+    // console.log(allTodos);
   
-    createTodo();
+    createTodo(todoObject);
   }
   
 })
 
-let deleteBtn = document.querySelector('.delete_Btn');
-let todoBox = document.querySelector('.todo_box');
+// let deleteBtn = document.querySelector('.delete_Btn');
+// let todoBox = document.querySelector('.todo_box');
 // function create todo in todo_list:
-function createTodo() {
-  todoList.innerHTML = '';
-  allTodos.forEach((todo) => {
+function createTodo(todo) {
+  // todoList.innerHTML = '';
+  // allTodos.forEach((todo) => {
     const todoElement = document.createElement('div');
     todoElement.classList.add('todo_box');
     todoList.appendChild(todoElement);
@@ -62,28 +62,30 @@ function createTodo() {
     todoElement.appendChild(todoDiscrElement);
 
     const deleteBtnElement = document.createElement('button');
-    deleteBtnElement.classList.add('delete_Btn')
-    deleteBtnElement.textContent = 'Delete';
+    deleteBtnElement.classList.add('delete_Btn');
+    deleteBtnElement.setAttribute('onclick', 'deleteTodoBox()')
+    deleteBtnElement.textContent = 'X';
     todoElement.appendChild(deleteBtnElement);
     
     console.log(todoElement);
-  });
+  // });
 
   todoTitleText.value = '';
   todoDateText.value = '';
   todoDiscriptionText.value = '';
   
-  deleteBtn = document.querySelector('.delete_Btn')
-  todoBox = document.querySelector('.todo_box')
 }
+// todoBox = document.querySelector('.todo_box')
 
 // console.log(todoBox);
 // function deleteTodoBox() {
-// }
-
-deleteBtn.addEventListener('click', (e) => {
-  // todoBox.outerHTML = '';
+  // }
+  
+  
+  function deleteTodoBox()  {
+  const deleteBtn = document.querySelector('.delete_Btn');
+  
   console.log(deleteBtn);
-  console.log(e.srcElement.parentNode);
-  todoList.removeChild(e.srcElement.parentNode)
-}, true);
+  // console.log(e.srcElement.parentNode);
+  // todoList.removeChild(e.srcElement.parentNode)
+};

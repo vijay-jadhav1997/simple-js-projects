@@ -81,7 +81,7 @@ body{
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 5px lightslategray;
-  width: 400px;
+  width: 450px;
 }
 
 .title_box {
@@ -92,15 +92,17 @@ body{
 }
 .title_box .title {
   text-transform: capitalize;
+  margin-right: 5px;
 }
 .delete_Btn {
   position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
+  top: 5px;
+  /* transform: translate(0, -50%); */
   right: 5px;
-  padding: 5px;
+  height: 25px;
+  width: 25px;
   background-color: rgb(209, 0, 0);
-  border-radius: 5px;
+  border-radius: 50%;
   color: white;
   cursor: pointer;
   transition: all 0.3sec;
