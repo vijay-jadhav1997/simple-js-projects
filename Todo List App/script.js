@@ -84,8 +84,8 @@ function createTodo(todo) {
   
   function deleteTodoBox()  {
   const deleteBtn = document.querySelector('.delete_Btn');
-  
-  console.log(deleteBtn);
+  const todoBox = deleteBtn.parentNode;
+  console.log(todoBox);
   // console.log(e.srcElement.parentNode);
-  // todoList.removeChild(e.srcElement.parentNode)
+  todoList.removeChild(todoBox)
 };
