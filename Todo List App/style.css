@@ -4,32 +4,37 @@
   font-family: Arial, Helvetica, sans-serif;
   border: none;
   box-sizing: border-box;
-  background-color: white;
 }
 body{
-  height: 100vh;
   width: 100%;
-  background: linear-gradient(135deg, cornflowerblue, rgb(226, 2, 189), rgb(42, 42, 247));
+  background: rgb(90, 116, 164);
 }
 main {
-  background: transparent;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   row-gap: 20px;
+  padding-top: 20px;
+}
+main h1 {
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 0 5px rgb(33, 253, 253);
 }
 #todo_container{
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 10px;
-  /* background-color: yellow; */
   border: 1px solid yellowgreen;
   border-radius: 10px;
   margin-block: 20px;
   padding: 10px;
   width: max-content;
+  width: 490px;
+  background-color: white;
 }
 .input_field #todo_name,
 .input_field #todo_date,
@@ -38,7 +43,6 @@ main {
   padding: 10px 0;
   font-size: 1.1em;
   border-radius: 5px;
-  /* text-align: center; */
   box-shadow: 0 0 5px darkslategray;
 }
 .input_field #todo_name{
@@ -48,6 +52,7 @@ main {
 .input_field #todo_date{
   font-size: medium;
   text-align: center;
+  cursor: pointer;
 }
 #descr_input {
   width: 100%;
@@ -60,12 +65,12 @@ main {
   background-color: blueviolet;
   color: white;
   font-size: 1.1em;
+  outline: none;
   cursor: pointer;
   transition: all 0.3sec;
 }
 .create_field .add_button:hover {
-  /* opacity: 0.8; */
-  box-shadow: 2px 2px 5px rgb(197, 0, 184);
+  box-shadow: 0 0 5px rgb(197, 0, 184);
 }
 .create_field .add_button:active {
   opacity: 0.7;
@@ -79,56 +84,66 @@ main {
   align-items: center;
   row-gap: 8px;
   border-radius: 10px;
-  border: 1px solid gray;
+  background-color: white;
 }
 .todo_list .todo_box {
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   position: relative;
   gap: 10px;
+  cursor: pointer;
+}
+.task_completed {
+  text-decoration: line-through;
+  color: gray;
 }
 #task_checkbox {
   height: 20px;
   width: 20px;
+  cursor: pointer;
 }
 .new_task {
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 5px lightslategray;
-  width: 450px;
+  width: 490px;
 }
-
-
 .title_box {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
   column-gap: 5px;
+  width: 92%;
 }
 .title_box .title {
   text-transform: capitalize;
   margin-right: 5px;
+  text-shadow: -2px -2px 3px rgb(243, 31, 250);
+}
+.title_box .time {
+  width: 100px;
+  font-size: 16px;
 }
 .delete_Btn {
   position: absolute;
-  top: 5px;
-  /* transform: translate(0, -50%); */
+  top: 8px;
   right: 5px;
   height: 25px;
   width: 25px;
   font-size: 22px;
-  background-color: rgb(209, 0, 0);
   border-radius: 50%;
-  color: white;
+  background-color: white;
+  border: 1px solid rgb(209, 0, 0);
+  color: rgb(209, 0, 0);
   cursor: pointer;
   transition: all 0.3sec;
 }
 .delete_Btn:hover {
-  background-color: white;
-  border: 1px solid rgb(209, 0, 0);
-  color: rgb(209, 0, 0);
+  background-color: rgb(209, 0, 0);
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  color: white;
 }
-.delete_Btn:active {
- box-shadow: 0 0 5px rgb(209, 0, 0);
+.new_task p {
+  text-indent: 10px;
+  padding-left: 5px;
 }
