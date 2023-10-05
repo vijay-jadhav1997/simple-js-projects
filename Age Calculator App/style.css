@@ -1,0 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contaner {
+  width: max-content;
+  margin: 20px auto;
+  background-color: bisque;
+  padding: 50px 10px 5px;
+  border-radius: 10px;
+}
+.input_box {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  column-gap: 20px;
+  background-color: blueviolet;
+}
+.input_box #user_dob,
+.input_box .subt_Btn{
+  padding: 5px 10px;
+  border-radius: 5px;
+  outline: none;
+}
+
+
+.display_age {
+  height: 100px;
+  width: 450px;
+  background-color: white;
+  margin-block: 20px;
+  padding: 10px;
+  text-align: center;
+}
