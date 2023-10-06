@@ -6,33 +6,54 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(92deg, rgb(45, 0, 157), rgb(181, 204, 248));
+}
 .contaner {
-  width: max-content;
-  margin: 20px auto;
-  background-color: bisque;
-  padding: 50px 10px 5px;
-  border-radius: 10px;
+  height: 100%;
+  background-color: rgba(252, 160, 48, 0.427);
+  padding: 50px 0 0 10%;
+}
+
+.contaner h2 {
+  display: inline-block;
+  padding: 20px 30px;
+  border-radius: 20px;
+  background-color: rgba(142, 252, 121, 0.276);
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.532);
+  margin-bottom: 50px;
+}
+.contaner h1 {
+  color: rgb(251, 252, 159);
 }
 .input_box {
-  display: flex;
-  /* align-items: center; */
-  justify-content: center;
-  column-gap: 20px;
-  background-color: blueviolet;
+  padding: 20px;
+  width: max-content;
+  background-color: rgba(234, 211, 255, 0.4);
+  margin-block: 30px;
+  border-radius: 10px;
 }
 .input_box #user_dob,
 .input_box .subt_Btn{
-  padding: 5px 10px;
+  padding: 10px 20px;
   border-radius: 5px;
   outline: none;
+  font-size: 18px;
 }
-
+.input_box #user_dob {
+  width: 210px;
+  margin-right: 20px;
+}
+.input_box .subt_Btn {
+  background-color: rgb(229, 246, 1);
+}
 
 .display_age {
   height: 100px;
   width: 450px;
-  background-color: white;
-  margin-block: 20px;
-  padding: 10px;
-  text-align: center;
+  color: white;
+  margin-top: 20px;
 }
