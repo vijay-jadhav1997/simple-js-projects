@@ -30,7 +30,7 @@ body {
 
 .title_box {
   color: white;
-  position: fixed;
+  position: absolute;
   bottom: 10%;
   left: 10%;
 }
@@ -42,3 +42,4 @@ body {
   color: rgb(255, 57, 195);
   font-weight: 900;
 }
+
