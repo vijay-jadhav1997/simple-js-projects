@@ -30,7 +30,7 @@ h2{
   /* width: max-content; */
   border-radius: 10px;
   /* box-shadow: 0 0 10px white; */
-  background-color: rgba(223, 224, 224, 0.539);
+  background-color: rgba(167, 251, 251, 0.158);
 }
 
 .container h5 {
@@ -67,7 +67,7 @@ h2{
   display: inline-block;
 }
 .container li:hover {
-  background-color: rgb(2, 130, 150);
+  background-color: rgba(12, 56, 63, 0.87);
 }
 .container li:nth-child(2n) {
   border: 2px solid rgb(8, 238, 254);
@@ -78,3 +78,4 @@ h2{
 .container li:nth-child(4n) {
   border: 2px solid rgb(254, 8, 8);
 }
+

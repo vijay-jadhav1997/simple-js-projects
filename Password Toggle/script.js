@@ -1,4 +1,4 @@
-
+// let elm = document.querySelector('.title_box');
 
 
 
@@ -24,20 +24,32 @@ let sliceMethod = fruits.slice(1,3);
 // }
 
 const numbers = new Array(1,2,3,4)
-console.log('10. TypeOf (fruits)=> ', typeof (fruits));
-console.log( '11. Is fruits array? =>',Array.isArray(fruits));
+// console.log('10. TypeOf (fruits)=> ', typeof (fruits));
+// console.log( '11. Is fruits array? =>',Array.isArray(fruits));
 
-console.log('12. TypeOf (numbers)=> ', typeof (numbers));
-console.log( '13. Is numbers array? =>',Array.isArray(numbers));
+// console.log('12. TypeOf (numbers)=> ', typeof (numbers));
+// console.log( '13. Is numbers array? =>',Array.isArray(numbers));
 
 let newArray = Array(...numbers);
 
 newArray.pop();
-console.log('14. TypeOf (newArray)=> ', typeof (newArray));
-console.log( '15. Is newArray array? =>',Array.isArray(newArray));
-console.log(newArray);
-console.log(numbers);
-console.log(Math);
+// console.log('14. TypeOf (newArray)=> ', typeof (newArray));
+// console.log( '15. Is newArray array? =>',Array.isArray(newArray));
+// console.log(newArray);
+// console.log(numbers);
+// console.log(Math);
 
 
 
+// numbers.push(this.numbers);
+// console.log(numbers);
+console.log('Alone in global scope =>', this);
+function name() {
+  console.log('within a function this refers =>',this);
+}
+name();
+
+function hide(params) {
+  console.log(params);
+  params.outerHTML = '';
+}

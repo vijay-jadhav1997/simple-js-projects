@@ -30,3 +30,4 @@ createElement('Math.min(x,y,z)', 'Return the minimum value among x, y & z.','Mat
 createElement('Math.max(x,y,z)', 'Return the minimum value among x, y & z.','Math.max(25, 10, 40, 5)', Math.max(25, 10, 40, 5), 'numbers = [20, 50, 5, -10, 525], Math.max(...numbers)', Math.max(...numbers));
 
 console.log(container.children);
+
