@@ -1,0 +1,29 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+}
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+.yellowBox {
+  height: 550px;
+  width: 550px;
+  color: white;
+  background-color: yellowgreen;
+  padding: 5px;
+  border-radius: 5px;
+  position: relative;
+}
+.redBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  color: white;
+  background-color: rgb(205, 50, 55);
+  padding: 15px;
+  border-radius: 5px;
+}

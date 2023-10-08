@@ -1,0 +1,26 @@
+
+
+
+.input_box{
+  margin-block: 20px;
+}
+
+.input_box input {
+  margin-block: 10px;
+}
+.create_Btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  color: rgb(1, 111, 126);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all ease-in-out 0.3sec;
+}
+.create_Btn:hover {
+  background-color: rgba(1, 111, 126, 0.594);
+  color: white;
+}
+.display_box div {
+  text-align: center;
+}
