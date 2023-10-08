@@ -1,0 +1,52 @@
+*{
+  /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  box-sizing: border-box;
+  border: none;
+  color: white;
+  text-shadow: -2px -2px 2px rgb(29, 29, 29);
+}
+
+body{
+  background: rgba(1, 132, 142, 0.603);
+  height: 100vh;
+  width: 100%;
+}
+h1 {
+  text-align: center;
+}
+.input_box,
+.container {
+  margin: 20px auto;
+  padding: 20px;
+  width: max-content;
+  background-color: rgba(251, 162, 246, 0.45);
+  font-size: 20px;
+  border-radius: 10px;
+}
+.input_box input {
+  padding: 10px;
+  font-size: 20px;
+  width: 150px;
+  color: black;
+  outline: none;
+  text-shadow: none;
+  border-radius: 5px;
+  text-indent: 10px;
+}
+.container {
+  background: linear-gradient(230deg, rgba(0, 128, 0, 0.422), rgba(0, 0, 255, 0.313), rgba(255, 0, 0, 0.304), rgba(255, 99, 71, 0.619), rgba(255, 255, 0, 0.39), rgba(238, 130, 238, 0.473));
+}
+.container span {
+  font-size: 22px;
+  color: rgb(225, 255, 174);
+  font-weight: 600;
+  margin: 0 8px;
+}
+.container h3 {
+  text-align: center;
+}
+.container li {
+  margin-top: 10px;
+  border-bottom: 1px solid black;
+  /* padding: 5px; */
+}

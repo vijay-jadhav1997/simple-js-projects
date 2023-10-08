@@ -21,7 +21,8 @@ h2{
   padding: 10px 20px;
   text-shadow: -2px -2px 2px rgb(87, 87, 87);
   border-radius: 10px;
-  background: linear-gradient(120deg, rgb(188, 0, 191), yellow, green);
+  background: linear-gradient(220deg, rgba(245, 81, 248, 0.479), rgba(255, 255, 0, 0.475), rgba(126, 0, 128, 0.338));
+  box-shadow: 0 0 5px rgba(179, 178, 178, 0.429);
   z-index: 100;
 }
 .container {
