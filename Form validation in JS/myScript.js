@@ -29,20 +29,46 @@ password.addEventListener('keyup',strongOrWeak, false);
 
 // Function for Strong or weak password title:
 function strongOrWeak(){
+  // * pattern to check password
+  const lowerCase = new RegExp('(?=.*[a-z])');
+  const upperCase = new RegExp('(?=.*[A-Z])');
+  const number = new RegExp('(?=.*[0-9])');
+  const symbol = new RegExp('(?=.*[!@#\$%\^&\*_-])');
+
+  const lowerCaseTest = lowerCase.test(password.value);
+  const upperCaseTest = upperCase.test(password.value);
+  const numberTest = number.test(password.value);
+  const symbolTest = symbol.test(password.value);
+
+  
   if (password.value === '') {
     pswdStrongTitle.textContent = '';
   }
-  else if (password.value.length < 5) {
-    pswdConfirmTitle.textContent = '';
-    pswdStrongTitle.textContent = 'Very Weak Password !';
-    pswdStrongTitle.style.color = 'red';
-  } else if(password.value.length < 9) {
-    pswdStrongTitle.textContent = 'Weak Password !';
-    pswdStrongTitle.style.color = 'red';
-  } else  {
+  else if(lowerCaseTest && upperCaseTest && numberTest && symbolTest && password.value.length >= 8)  {
+    pswdStrongTitle.style.color = 'green';
+    pswdStrongTitle.textContent = 'Very Strong Password !';
+  }
+  else if(lowerCaseTest && symbolTest && numberTest && password.value.length >= 8 )  {
     pswdStrongTitle.style.color = 'green';
     pswdStrongTitle.textContent = 'Strong Password !';
   }
+  else if(lowerCaseTest && numberTest && password.value.length >= 8)  {
+    pswdStrongTitle.style.color = 'rgb(255, 195, 57)';
+    pswdStrongTitle.textContent = 'medium strong Password !';
+  }
+  else if(password.value.length >= 12)  {
+    pswdStrongTitle.style.color = 'rgb(255, 195, 57)';
+    pswdStrongTitle.textContent = 'medium strong Password !';
+  }
+  else if(lowerCaseTest && upperCaseTest) {
+    pswdStrongTitle.textContent = 'Weak Password !';
+    pswdStrongTitle.style.color = 'red';
+  } 
+  else if(lowerCase ) {
+    pswdConfirmTitle.textContent = '';
+    pswdStrongTitle.textContent = 'Very Weak Password !';
+    pswdStrongTitle.style.color = 'red';
+  } 
 
   pswdConfirm.value = '';
   pswdConfirmTitle.textContent = '';
