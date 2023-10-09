@@ -10,8 +10,8 @@ const isSpacedesplayBox = document.querySelector('.isSpacedesplayBox');
 
 //* function for show or hide password field
 function toggle(elementBtn) {
-  let type = password.getAttribute('type');
-  if (type === 'password') {
+  // let type = password.getAttribute('type');
+  if (password.type === 'password') {
     elementBtn.textContent = 'Hide Password';
     password.setAttribute('type', 'text');
     pswdConfirm.setAttribute('type', 'text');
