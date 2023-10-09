@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Toggle Button with JS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Password Toggle Button with JS</h1>
+  
+  <div class="container">
+    <div class="input_box">
+      <label for="userName">User Name:</label>  <br>
+      <input type="text" name="userName" id="userName" placeholder="Jay Shree Radhe.."> 
+    </div>
+
+    <div class="input_box">
+      <label for="email">Email Id:</label>  <br>
+      <input type="email" onkeyup="spaceDetection(this)"  name="email" id="email" placeholder="Radhe1275@gmail.com"> 
+      <!-- <span class=""></span> -->
+    </div>
+    
+    <div class="input_box">
+      <label for="password"> Password:</label>  <br>
+      <input type="password" name="password" id="password" placeholder="Radhe@1275..."> 
+      <span class="strong_pswd"></span>
+    </div>
+
+    <div class="input_box">
+      <label for="password2">Confirm Password:</label>  <br>
+      <input type="password" name="password2" id="password2" placeholder="Radhe@1275..."> 
+      <span class="confirmed"></span>
+    </div>
+    <span class="capsLock"></span>
+    <span class="isSpacedesplayBox"></span>
+
+
+    <div class="buttons">
+      <button class="signUp">Sign Up</button>
+      <button class="show_password" onclick="toggle(this)">Show Password</button>
+    </div>
+  </div>
+  
+</body>
+<script src="myScript.js"></script>
+</html>
