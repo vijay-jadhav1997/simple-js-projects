@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form Validation in Js</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>!! Form Validation Using JavaScript !!</h1>
+  <div class="container">
+    <form>
+
+      <div class="input_box">
+        <label for="user_name">Full Name:</label>
+        <input type="text" name="user_name" id="user_name" onkeyup="validateName()" placeholder="Enter your name">
+        <span class="name_error"></span>
+      </div>
+
+      <div class="input_box">
+        <label for="phoneNo">Phone no.:</label>
+        <input type="tel" name="phoneNo" id="phoneNo" onkeyup="validatePhone()" placeholder="123 456 7890">
+        <span class="phone_error"></span>
+      </div>
+
+      <div class="input_box">
+        <label for="emailId">Email Id:</label>
+        <input type="tel" name="emailId" id="emailId" onkeyup="validateEmailId()" placeholder="email23@.....">
+        <span class="email_error"></span>
+      </div>
+      
+      <div class="input_box">
+        <label for="userMsg">Your Message:</label>
+        <textarea rows="5" name="userMsg" id="userMsg" onkeyup="validateUserMsg()" placeholder="Enter your message..."> </textarea>
+        <span class="msg_error"></span>
+      </div>
+
+      <button onclick="validateForm()">Submit</button>
+      <span class="submit_error"></span>
+      </form>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+<script src="script.js"></script>
+</html>

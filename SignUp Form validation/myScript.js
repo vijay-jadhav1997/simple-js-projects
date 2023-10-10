@@ -86,6 +86,7 @@ function confirmation(){
   if (password.value === '') {
     pswdConfirmTitle.textContent = 'Please, enter Profile Password first !';
     pswdStrongTitle.textContent = 'Please, enter Profile Password first !';
+    pswdConfirm.value = '';
   }
   else if (pswdConfirm.value === '') {
     pswdConfirmTitle.style.color = 'red';
@@ -130,12 +131,8 @@ window.addEventListener('keyup', (event) => {
 function spaceDetection(element) {
   let pattern = /\s/ig;
   let isSpace = pattern.test(element.value);
-
+  
   if (isSpace) {
-    isSpacedesplayBox.textContent = `WARNING! Email & Password can't have space`;
-    element.value = element.value.substring(0, element.value.length - 1);
-  } 
-  else if (isSpace) {
     isSpacedesplayBox.textContent = `WARNING! Email & Password can't have space`;
     element.value = element.value.substring(0, element.value.length - 1);
   } 
@@ -143,4 +140,3 @@ function spaceDetection(element) {
     isSpacedesplayBox.textContent = '';
   }
 }
-element.value

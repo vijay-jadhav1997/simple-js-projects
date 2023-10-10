@@ -1,0 +1,117 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(5, 5, 128, 0.717);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 30px;
+}
+h1 {
+  color: white;
+  width: max-content;
+  border: 1px solid pink;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+.container {
+  width: 95%;
+  max-width: 520px;
+  border: 1px solid rgb(243, 181, 170);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.container form {
+  width: 100%;
+  margin: 10px auto;
+  padding: 50px 30px 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.58);
+  position: relative;
+}
+
+.input_box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  position: relative;
+}
+.input_box label {
+  flex-basis: 28%;
+  margin-right: 10px;
+}
+.input_box input,
+.input_box textarea {
+  flex-basis: 68%;
+  background: transparent;
+  padding: 10px 0;
+  border-bottom: 1px solid gray;
+  color: rgb(51, 51, 51);
+  font-size: 16px;
+}
+::placeholder {
+  font-size: 14px;
+  color: rgb(185, 185, 185);
+}
+
+.input_box span {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  color: red;
+  font-size: 14px;
+}
+
+.input_box span span {
+  position: absolute;
+  right:10px;
+  bottom: 15px;
+  /* transform: translateY(-50%); */
+  /* background-color: green; */
+  color: seagreen;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  font-size: 22px;
+}
+
+form button {
+  background: rgba(19, 30, 79, 0.868);
+  color: white;
+  border-radius: 5px;
+  /* border: 1px solid rgba(255, 255, 255, 0.911); */
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all ease-in-out 0.5sec;
+  display: block;
+  margin: 30px auto 10px;
+}
+form button:hover {
+  box-shadow: 0 0 5px black;
+}
+form button:active {
+  opacity: 0.7;
+}
+
+.submit_error {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 5px;
+  color: red;
+}
