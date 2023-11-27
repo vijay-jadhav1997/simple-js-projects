@@ -1,17 +1,25 @@
-// 
+//
 
-const story = document.querySelector('.story');
+const story = document.querySelector(".story");
 
-const setText = document.querySelector('#set-text');
-setText.addEventListener('click', () => {
-  story.textContent = 'Jay Jay Ram Krushna Hari, "Govind Radhe - Shree Gopal Radhe", "Shree Dnyanoba Mauli Tukaram"';
-}, false)
+const setText = document.querySelector("#set-text");
+setText.addEventListener(
+  "click",
+  () => {
+    story.textContent =
+      'Jay Jay Ram Krushna Hari, "Govind Radhe - Shree Gopal Radhe", "Shree Dnyanoba Mauli Tukaram"';
+  },
+  false
+);
 
-const clearText = document.querySelector('#clear-text');
-clearText.addEventListener('click', () => {
-  story.textContent = '';
-}, false);
-
+const clearText = document.querySelector("#clear-text");
+clearText.addEventListener(
+  "click",
+  () => {
+    story.textContent = "";
+  },
+  false
+);
 
 const parent = document.body.querySelector(".parent");
 
@@ -32,5 +40,9 @@ const removeChild = document.body.querySelector("#remove-child");
 removeChild.addEventListener("click", () => {
   const child = document.body.querySelector(".child");
   parent.removeChild(child);
-  
 });
+
+function greet(name) {
+  let greetMsg = `!! Jay Hari ${name} !!`;
+  return greetMsg;
+}
