@@ -1,41 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to Movies.com</title>
-  <link rel="stylesheet" href=".\style.css">
-</head>
-<body>
-  <header class="header">
-    <div class="logo">
-      <img src="/Images/logos/netflix-logo.jpg" alt="netflix-Logo">
-    </div>
-    <div class="search">
-      <div class="search-bar">
-      <input oninput="searchMovie()" class="search-box" type="search" placeholder="Search Movie" name="" id="">
-      <button><ion-icon name="search-outline"></ion-icon></button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Movies.com</title>
+    <link rel="stylesheet" href=".\style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="/Images/logos/netflix-logo.jpg" alt="netflix-Logo" />
       </div>
-    </div>
-  </header>
-
-  <section class="movies">
-    <div class="movie">
-      <div class="overlay">
-        <div class="video"></div>
-        <div class="details">
-          <h3>Uri-The Surgical Strike (2019)</h3>
-          <h3>IMDB: 9</h3>
-          <p>Director: Bhansali</p>
+      <div class="search">
+        <div class="search-bar">
+          <input
+            oninput="searchMovie()"
+            class="search-box"
+            type="search"
+            placeholder="Search Movie"
+            name=""
+            id=""
+          />
+          <button><ion-icon name="search-outline"></ion-icon></button>
         </div>
       </div>
-      <img class="poster" src="https://i.pinimg.com/474x/5f/9a/52/5f9a52e454582009861a21b04c4c3096.jpg" alt="">
-    </div>
-  </section>
+    </header>
 
+    <section class="movies">
+      <div class="movie">
+        <div class="overlay">
+          <div class="video"></div>
+          <div class="details">
+            <h3>Uri-The Surgical Strike (2019)</h3>
+            <h3>IMDB: 9</h3>
+            <p>Director: Bhansali</p>
+          </div>
+        </div>
+        <img
+          class="poster"
+          src="https://i.pinimg.com/474x/5f/9a/52/5f9a52e454582009861a21b04c4c3096.jpg"
+          alt=""
+        />
+      </div>
+    </section>
+    <section class="footer">
+      <h2>!! Jay Hari !!</h2>
+      <h3>Datails:</h3>
+      <ul>
+        <li>Name: Jay Shree Ram Krushna Hari</li>
+        <li>
+          Address: At. Bhokangaon, Tq. Kannad, dist. Shree Chhatrapati
+          Sambhajinagar (MH 20)
+        </li>
+      </ul>
+    </section>
 
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script src="./script.js"></script>
-</body>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
 </html>
