@@ -1,5 +1,3 @@
-//
-
 const story = document.querySelector(".story");
 
 const setText = document.querySelector("#set-text");
