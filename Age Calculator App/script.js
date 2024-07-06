@@ -52,7 +52,7 @@ submitBtn.addEventListener('click', (e)=> {
       }  
       else if(birthDay <= thisDay){
         days = thisDay - birthDay;
-        resultBox.textContent = `you are is  ${days > 1 ? days  + ' days' : days + ' day' } old.`
+        resultBox.textContent = `you are  ${days > 1 ? days  + ' days' : days + ' day' } old.`
         console.log('jay hariold.');
       }
       
@@ -75,21 +75,21 @@ submitBtn.addEventListener('click', (e)=> {
         }
 
         if (months === 0) {
-          resultBox.textContent = `you are is  ${days > 1 ? days  + ' days' : days + ' day '} old.`
+          resultBox.textContent = `you are  ${days > 1 ? days  + ' days' : days + ' day '} old.`
         } else {
-          resultBox.textContent = `you are is ${months > 1 ? months + '  months and' : months + ' month and'}  ${days > 1 ? days  + ' days' : days + ' day '} old.`
+          resultBox.textContent = `you are ${months > 1 ? months + '  months and' : months + ' month and'}  ${days > 1 ? days  + ' days' : days + ' day '} old.`
         }
         console.log('jay hariold.');
       } 
       else if(birthDay === thisDay){
         months = thisMonth - birthMonth;
-        resultBox.textContent = `you are is  ${months > 1 ? months + ' months' : months + ' month'} old.`
+        resultBox.textContent = `you are  ${months > 1 ? months + ' months' : months + ' month'} old.`
         console.log('jay hariold.');
       }
       else if (birthDay < thisDay) {
         months = thisMonth - birthMonth;
         days = thisDay - birthDay;
-        resultBox.textContent = `you are is ${months > 1 ? months + ' months and' : months + ' month and'} ${days > 1 ? days  + ' days' : days + ' day' }  old.`
+        resultBox.textContent = `you are ${months > 1 ? months + ' months and' : months + ' month and'} ${days > 1 ? days  + ' days' : days + ' day' }  old.`
         console.log('jay hariold.');
       }
     }
@@ -114,21 +114,21 @@ submitBtn.addEventListener('click', (e)=> {
         }
 
         if(years === 0) {
-          resultBox.textContent = `you are is ${months > 1 ? months + '  months and' : months + ' month and'}  ${days > 1 ? days  + ' days' : days + ' day '} old.`
+          resultBox.textContent = `you are ${months > 1 ? months + '  months and' : months + ' month and'}  ${days > 1 ? days  + ' days' : days + ' day '} old.`
           console.log('jay hariold.');
         }
         else {
-          resultBox.textContent = `you are is ${years > 1 ? years + '  years,' : years + ' year,'} ${months > 1 ? months + '  months and' : months + ' month and'}  ${days > 1 ? days  + ' days' : days + ' day '} old.`
+          resultBox.textContent = `you are ${years > 1 ? years + '  years,' : years + ' year,'} ${months > 1 ? months + '  months and' : months + ' month and'}  ${days > 1 ? days  + ' days' : days + ' day '} old.`
           console.log('jay hariold.');
         }
       } 
       else if(birthDay === thisDay){
         if (years === 0){
-          resultBox.textContent = `you are is  ${months > 1 ? months + ' months' : months + ' month'} old.`
+          resultBox.textContent = `you are  ${months > 1 ? months + ' months' : months + ' month'} old.`
           console.log('jay hariold.');
         }
         else {
-          resultBox.textContent = `you are is ${years > 1 ? years + ' years and' : years + ' year and'} ${months > 1 ? months + ' months' : months + ' month'} old.`
+          resultBox.textContent = `you are ${years > 1 ? years + ' years and' : years + ' year and'} ${months > 1 ? months + ' months' : months + ' month'} old.`
           console.log('jay hariold.');
         }
         console.log('jay hariold.');
@@ -136,11 +136,11 @@ submitBtn.addEventListener('click', (e)=> {
       else if (birthDay < thisDay) {
         days = thisDay - birthDay;
         if(years === 0) {
-          resultBox.textContent = `you are is ${months > 1 ? months + ' months and' : months + ' month and'} ${days > 1 ? days  + ' days' : days + ' day' }  old.`
+          resultBox.textContent = `you are ${months > 1 ? months + ' months and' : months + ' month and'} ${days > 1 ? days  + ' days' : days + ' day' }  old.`
           console.log('jay hariold.');
         }
         else {
-          resultBox.textContent = `you are is ${years > 1 ? years + ' years' : years + ' year,'} ${months > 1 ? months + ' months and' : months + ' month and'} ${days > 1 ? days  + ' days' : days + ' day' }  old.`
+          resultBox.textContent = `you are ${years > 1 ? years + ' years' : years + ' year,'} ${months > 1 ? months + ' months and' : months + ' month and'} ${days > 1 ? days  + ' days' : days + ' day' }  old.`
           console.log('jay hariold.');
         }
       }
@@ -164,23 +164,23 @@ submitBtn.addEventListener('click', (e)=> {
 
         if (years === 0) {
           months = 11 - birthMonth + thisMonth;
-          resultBox.textContent = `you are is  ${months > 1 ? months  + ' months and' : months + ' month and' } ${days > 1 ? days  + ' days' : days + ' day' } old.`
+          resultBox.textContent = `you are  ${months > 1 ? months  + ' months and' : months + ' month and' } ${days > 1 ? days  + ' days' : days + ' day' } old.`
           console.log('jay hari old.');
         } else {
           months = 11 - birthMonth + thisMonth;
-          resultBox.textContent = `you are is ${years > 1 ? years  + ' years,' : years + ' year,' }  ${months > 1 ? months  + ' months and' : months + ' month and' } ${days > 1 ? days  + ' days' : days + ' day' } old.`
+          resultBox.textContent = `you are ${years > 1 ? years  + ' years,' : years + ' year,' }  ${months > 1 ? months  + ' months and' : months + ' month and' } ${days > 1 ? days  + ' days' : days + ' day' } old.`
           console.log('jay hari old.');
         }
         console.log('jay hari old.');
       }  
       else if(birthDay === thisDay){
         // years = thisYear - birthYear;
-        resultBox.textContent = `you are is  ${years > 1 ? years  + ' years' : years + ' year' } old.`
+        resultBox.textContent = `you are  ${years > 1 ? years  + ' years' : years + ' year' } old.`
         console.log('jay hariold.');
       }
       else if(birthDay < thisDay) {
         days = thisDay - birthDay;
-        resultBox.textContent = `you are is  ${years > 1 ? years  + ' years and' : years + ' year and' } ${days > 1 ? days  + ' days' : days + ' day' } old.`
+        resultBox.textContent = `you are  ${years > 1 ? years  + ' years and' : years + ' year and' } ${days > 1 ? days  + ' days' : days + ' day' } old.`
         console.log('jay hariold.');
       }
     } 
@@ -203,20 +203,20 @@ submitBtn.addEventListener('click', (e)=> {
 
         months -= 1;
         if (months === 0) {
-          resultBox.textContent = `you are is ${years > 1 ? years + '  years and' : years + ' year and'}  ${days > 1 ? days  + ' days' : days + ' day '} old.`
+          resultBox.textContent = `you are ${years > 1 ? years + '  years and' : years + ' year and'}  ${days > 1 ? days  + ' days' : days + ' day '} old.`
         } else {
-          resultBox.textContent = `you are is ${years > 1 ? years + ' years,' : years + ' year,'} ${months > 1 ? months + '  months and' : months + ' month and'}  ${days > 1 ? days  + ' days' : days + ' day '} old.`
+          resultBox.textContent = `you are ${years > 1 ? years + ' years,' : years + ' year,'} ${months > 1 ? months + '  months and' : months + ' month and'}  ${days > 1 ? days  + ' days' : days + ' day '} old.`
         }
       
         console.log('jay hariold.');
       } 
       else if(birthDay === thisDay){
-        resultBox.textContent = `you are is ${years > 1 ? years + ' years and' : years + ' year and'}  ${months > 1 ? months + ' months' : months + ' month'} old.`
+        resultBox.textContent = `you are ${years > 1 ? years + ' years and' : years + ' year and'}  ${months > 1 ? months + ' months' : months + ' month'} old.`
         console.log('jay hariold.');
       }
       else if (birthDay < thisDay) {
         days = thisDay - birthDay;
-        resultBox.textContent = `you are is ${years > 1 ? years + ' years,' : years + ' year,'} ${months > 1 ? months + ' months and' : months + ' month and'} ${days > 1 ? days  + ' days' : days + ' day' }  old.`
+        resultBox.textContent = `you are ${years > 1 ? years + ' years,' : years + ' year,'} ${months > 1 ? months + ' months and' : months + ' month and'} ${days > 1 ? days  + ' days' : days + ' day' }  old.`
         console.log('jay hariold.');
       }
     }

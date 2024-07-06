@@ -22,7 +22,8 @@ body{
   justify-content: center;
   align-items: center;
   flex: 1;
-  max-height:50%;
+  width: 350px;
+  max-height:400px;
   background-color: rgb(42, 41, 41);
   padding: 30px;
   border-radius: 10px;

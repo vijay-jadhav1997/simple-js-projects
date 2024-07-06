@@ -34,7 +34,7 @@ h1 {
   text-indent: 10px;
 }
 .container {
-  background: linear-gradient(230deg, rgba(0, 128, 0, 0.422), rgba(0, 0, 255, 0.313), rgba(255, 0, 0, 0.304), rgba(255, 99, 71, 0.619), rgba(255, 255, 0, 0.39), rgba(238, 130, 238, 0.473));
+  background-color: #815e04c8;
 }
 .container span {
   font-size: 22px;

@@ -10,6 +10,10 @@ body{
   height: 100vh;
   width: 100%;
   background: linear-gradient(245deg, rgba(99, 39, 1, 0.66), rgba(1, 27, 115, 0.742), rgba(1, 27, 115, 0.742));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 body h2 {
   background-color: rgba(254, 166, 253, 0.295);
@@ -23,9 +27,12 @@ body h2 {
   flex-direction: column;
   width: max-content;
   margin-block-start: 50px;
-  margin-left: 10%;
-  /* background-color: rgb(226, 43, 186); */
+  /* border: 1px solid rgb(216, 0, 202); */
+  border-radius: 5px;
+  padding: 40px 20px;
+  background-color: #f778fb29;
 }
+
 .box h1 span {
   font-size: 35px;
   color: rgb(216, 0, 202);
@@ -37,7 +44,7 @@ body h2 {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   font-size: 20px;
   border-radius: 5px;
   margin: 20px 0 8px 0;

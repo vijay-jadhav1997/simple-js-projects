@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Form</title>
+  </head>
+  <body>
+    <h1>HTML Form</h1>
+    <h2>Login form</h2>
+    <form action="" style="margin: 20px auto; width: 400px">
+      <p class="input">
+        <label for="name">Your name</label> <br />
+        <input type="text" name="name" id="name" />
+      </p>
+      <p class="input">
+        <label for="mobile_num">Mobile number or Email</label> <br />
+        <input type="text" name="mobile_num" id="mobile_num" />
+      </p>
+      <p class="input">
+        <label for="pswd">Password</label> <br />
+        <input type="password" name="pswd" id="pswd" />
+      </p>
+      <p class="input">
+        <label for="repswd">Re-enter password</label> <br />
+        <input type="password" name="pswd" id="repswd" />
+      </p>
+      <p class="input">
+        <button type="submit">Continue</button>
+        <button type="reset">Continue</button> <br />
+        <br />
+        <input type="checkbox" name="terms" id="term_cond" />
+        <label for="term_cond"
+          >you are aggring to our Terms & Conditions of using this platforms!
+        </label>
+      </p>
+    </form>
+
+    <div class="practice">
+      <h2>Youtube search</h2>
+      <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query" id="name" />
+        <!-- <input type="submit" value="Search on Youtube" /> -->
+        <button>Search on Youtube</button>
+      </form>
+      <h2>Google search</h2>
+      <form action="https://www.google.com/search">
+        <input type="text" name="q" id="name" />
+        <!-- <input type="submit" value="Search on Google" /> -->
+        <button>Search on Google</button>
+      </form>
+      <h2>Google search</h2>
+      <form action="/">
+        <input type="text" name="q" id="name" />
+        <!-- <input type="submit" value="Search on Google" /> -->
+        <button>Search on Google</button>
+      </form>
+    </div>
+  </body>
+</html>

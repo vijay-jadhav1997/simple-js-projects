@@ -14,18 +14,13 @@ body {
 .contaner {
   height: 100%;
   background-color: rgba(252, 160, 48, 0.427);
-  padding: 50px 0 0 10%;
+  padding: 50px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.contaner h2 {
-  display: inline-block;
-  padding: 20px 30px;
-  border-radius: 20px;
-  background-color: rgba(142, 252, 121, 0.276);
-  color: rgb(255, 255, 255);
-  box-shadow: 0 0 10px rgba(255, 255, 0, 0.532);
-  margin-bottom: 50px;
-}
 .contaner h1 {
   color: rgb(251, 252, 159);
 }

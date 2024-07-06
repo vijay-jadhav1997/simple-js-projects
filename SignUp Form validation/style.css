@@ -5,22 +5,21 @@
 }
 
 body{
-  background-color: rgba(64, 2, 121, 0.726);
+  background-color: #2b0252b9;
 }
 h1{
   color: white;
   padding: 10px 20px;
   margin: 20px auto;
   width: max-content;
-  box-shadow: 0 0 10px yellow;
   border-radius: 5px;
-  background: rgba(168, 250, 97, 0.578);
+  background: #a8fa6193;
 }
 .container {
   margin: 20px auto;
   padding: 10px 30px;
   width: max-content;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -80,15 +79,18 @@ h1{
 }
 .container .signUp {
   background-color: rgb(224, 99, 3);
+  border: 1px solid #ffffff;
+
 }
 .container .signUp:hover {
   background-color: rgb(255, 255, 255);
   color: rgb(224, 99, 3);
   border: 1px solid rgb(224, 99, 3);
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 .container .show_password {
   background-color: rgb(2, 178, 160);
+  width: 200px;
 }
 .container .show_password:hover {
   background-color: rgb(255, 255, 255);

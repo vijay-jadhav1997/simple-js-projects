@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Basic Calculator | Javascript</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <nav class="navbar">
-    <h1 class="nav-brand" onmouseenter="modify()" onmouseleave="demodify()">Calculator</h1>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Calculator | Javascript</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1 class="nav-brand" onmouseenter="modify()" onmouseleave="demodify()">
+        Calculator
+      </h1>
+    </nav>
 
-  <main class="container">
-    <input type="text" id="output" readonly />
-    <input type="text" id="display-operation" readonly />
-    <!-- <input type="text" id="output" readonly /> -->
-    <div id="calculator">
-      <button class="number">1</button>
-      <button class="number">2</button>
-      <button class="number">3</button>
-      <button class="operation" data-action="divide"> ÷ </button>
-      <button class="number">4</button>
-      <button class="number">5</button>
-      <button class="number">6</button>
-      <button class="operation" data-action="multiply"> × </button>
-      <button class="number">7</button>
-      <button class="number">8</button>
-      <button class="number">9</button>
-      <button class="operation" data-action="subtract"> - </button>
-      <button class="number zero">0</button>
-      <button class="equal"> = </button>
-      <button class="operation" data-action="sum"> + </button>
-    </div>
-  </main>
-  <script src="script.js"></script>
-</body>
+    <main class="container">
+      <input type="text" id="output" readonly />
+      <input type="text" id="display-operation" readonly />
+      <!-- <input type="text" id="output" readonly /> -->
+      <div id="calculator">
+        <button class="number">1</button>
+        <button class="number">2</button>
+        <button class="number">3</button>
+        <button class="operation" data-action="divide">÷</button>
+        <button class="number">4</button>
+        <button class="number">5</button>
+        <button class="number">6</button>
+        <button class="operation" data-action="multiply">×</button>
+        <button class="number">7</button>
+        <button class="number">8</button>
+        <button class="number">9</button>
+        <button class="operation" data-action="subtract">-</button>
+        <button class="number zero">0</button>
+        <button class="equal">=</button>
+        <button class="operation" data-action="sum">+</button>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>
