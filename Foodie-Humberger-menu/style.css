@@ -1,0 +1,365 @@
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f6f0eb;
+  color: #492118;
+}
+
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #492118;
+}
+
+.content {
+  overflow: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  height: 100dvh;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 5rem;
+  z-index: 100;
+}
+
+header .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  height: 6.5rem;
+  padding: 1rem 2rem;
+  background-color: #ffffffe0;
+  backdrop-filter: blur(20px);
+}
+
+header .logo-container {
+  width: 4rem;
+}
+.foodie-logo {
+  width: 100%;
+}
+
+header .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+header .nav-links a {
+  padding: 0.75rem 0;
+  font-size: 1.3rem;
+}
+
+header .nav-links a:hover {
+  text-decoration: underline #daa520 3px;
+  text-underline-offset: 1rem;
+}
+
+.nav-links .close-icon {
+  display: none;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0.25rem;
+  right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+
+header .humberger-menu-wrapper {
+  display: none;
+  height: 3.5rem;
+  width: 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.humberger-menu-wrapper .humberger-icon-container{
+  width: 7rem;
+  height: 7rem;
+  background-color: #f7eed2ed;
+  position: absolute;
+  top: -3.6rem;
+  right: -3.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: left;
+  align-items: end;
+}
+.humberger-icon{
+  padding: 0.25rem;
+  margin: 0 0 1rem 1.25rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+
+.header-container.open  .humberger-menu-wrapper {
+  display: none;
+}
+
+.header-container.open .nav-links .close-icon {
+  display: inline-block;
+}
+ 
+.header-container.open .nav-links {
+  right: 1rem;
+}
+
+.header-container.open .nav-links a {
+  font-size: 1rem;
+  padding-inline: 1.5rem;
+}
+
+.header-container.open .nav-links a:hover {
+  text-underline-offset: 0.5rem;
+  background-color: #bfd6e4d3;
+  text-decoration: none;
+}
+
+
+
+/*? stylink Main pages */
+main {
+  width: 100%;
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+main section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.welcome-message-container {
+  /* display: none; */
+  position: absolute;
+  top: -10rem;
+  left: auto;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  box-shadow: 0 0 5px #800080;
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 105;
+  transition: top 1s;
+}
+.welcome-message-container .message-content {
+  position: relative;
+} 
+#home-page .welcome-message-container .message-content  p.welcome-message{ 
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  font-weight: 100;
+  color: #11ad11;
+}
+.welcome-message-container .message-content .message-close-btn {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  color: #d70606;
+  position: absolute;
+  top: -1.5rem;
+  right: -3.25rem;
+  padding: 0 4px;
+  border: 1px solid #747474;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.welcome-message-container .message-content .message-close-btn:hover {
+  opacity: 0.7;
+}
+.welcome-message-container.open {
+  display: block;
+  top: 1rem;
+  animation: blinks 1s infinite ease-in-out alternate;
+}
+
+@keyframes blinks {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+  
+main #home-page .group2-img-container {
+  max-width: 75rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+#home-page .group2-img-container img{
+  width: 100%;
+}
+
+main #home-page p{
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+
+main section h2 {
+  margin-top: 7rem;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+main section .img-container{
+  max-width: 54rem;
+  margin-top: 2rem;
+}
+
+.img-container img{
+  width: 100%;
+}
+
+
+main .go-to-top {
+  max-width: 52rem;
+  margin: 5rem auto;
+  text-align: right;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+main .go-to-top a {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background-color: #daa520;
+  color: #fff;
+  transition: color 0.5s;
+}
+main .go-to-top a:hover {
+  background-color: #fff;
+  color: #daa520;
+}
+
+
+
+
+/* ? Media Queries */
+@media screen and (max-width: 1150px) {
+  header .logo-container {
+    width: 3rem;
+  }
+  
+  header .nav-links {
+    gap: 2.25rem;
+  }
+
+  header .nav-links a {
+    font-size: 1rem;
+  }
+
+  main section h2 {
+    font-size: 2.5rem;
+  }
+
+  main #home-page .group2-img-container {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+
+}
+
+
+@media screen and (max-width: 950px) {
+  header .header-container {
+    height: 5.5rem;
+  }
+  
+  header .nav-links {
+    gap: 1.5rem;
+  }
+
+  header .nav-links a {
+    font-size: 14px;
+  }
+
+  main section h2 {
+    font-size: 2rem;
+  }
+
+  main #home-page .group2-img-container {
+    margin-top: 5rem;
+    margin-bottom: 2.5rem;
+  }
+
+}
+
+
+@media screen and (max-width: 760px) {
+   header .logo-container {
+    width: 2.25rem;
+  }
+  header .header-container {
+    height: 5.5rem;
+    padding: 0.75rem 1rem;
+  }
+  
+  header .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    position: absolute;
+    top: 1rem;
+    right: -20rem;
+    width: 18rem;
+    height: 22rem;
+    padding: 2.5rem 0;
+    gap: 0.5rem;
+    background-color: #f7eed2ed;
+    transition: right 0.35s;
+  }
+  
+  header .humberger-menu-wrapper {
+    display: block; 
+  }
+
+
+  .welcome-message-container {
+    max-width: 90dvw;
+  }
+  #home-page .welcome-message-container .message-content  p.welcome-message {
+    font-size: 14px;
+  }
+  
+  main section h2 {
+    font-size: 1.5rem;
+    margin-top: 6rem;
+  }
+
+  main #home-page .group2-img-container {
+    margin-top: 5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  main #home-page p {
+    font-size: 1.25rem;
+  }
+  
+  main .go-to-top {
+    font-size: 1rem;
+  }
+}
+
+
