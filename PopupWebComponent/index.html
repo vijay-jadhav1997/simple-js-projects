@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo&family=Inika&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+  <title>A Simple Popup : JS Project</title>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="get-newsletter-popup close">
+    <button>Get Newsletter</button>
+    <img src="./images/cursor-hand-click.png" alt="cursor-hand-click">
+  </div>
+
+  <div class="subscribe-popup">
+    <div class="title-box">
+      <div class="img-container">
+        <img src="./Images/newsletter logo.png" alt="News letter logo">
+      </div>
+      <div class="title-info-container">
+        <h2>Don't miss out.</h2>
+        <p>Sign up for our newsletter to stay in loop.</p>
+      </div>
+      <span class="close-icon">&#x2716;</span>
+    </div>
+    <form class="input-box">
+      <input type="email" id="emailId" name="emailId" placeholder="EMAIL ADDRESS">
+      <button type="submit">SUBSCRIBE</button>
+    </form>
+  </div>
+</body>
+</html>
